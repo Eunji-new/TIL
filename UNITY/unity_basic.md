@@ -1,7 +1,7 @@
 # UNITY 시작
 
 ### 기본적인 사용법
-- Ctrl + F -> 그 오브젝트를 중심으로 볼수 있음
+- Shift + F -> 그 오브젝트를 중심으로 볼수 있음
 
 - 마우스 오른쪽 클릭, 드래그 -> 화면 돌림
 
@@ -30,7 +30,8 @@
 - 우선은 그다지 길지 않은 코드니까 첨부함
 
 
-using System.Collections;
+
+   using System.Collections;
 
 using System.Collections.Generic;
 
@@ -71,3 +72,11 @@ public class Ctr : MonoBehaviour
     }
 }
 
+
+## Time.deltaTime(초 / 프레임 레이트)
+
+- 프레임 1개의 실행 시간
+- 30프레임 레이트 게임은 약 0.03초
+- 60프레임 레이트 게임은 약 0.016초
+
+  “캐릭터의 이동 속도 = 1프레임당 이동 거리 * 프레임 레이트 / 초”의 양 변에 Time.deltaTime를 곱해주면 “1프레임당 이동 거리 = 캐릭터의 이동 속도
