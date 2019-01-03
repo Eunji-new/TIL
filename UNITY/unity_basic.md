@@ -56,18 +56,23 @@ public class Ctr : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow)){ 
             tr.Translate(Vector3.left * moveSpeed * Time.deltaTime);//왼쪽(x축 -)
+            //tr.Translate(-moveSpeed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             tr.Translate(Vector3.right * moveSpeed * Time.deltaTime); // 오른쪽(x축 +)
+            //tr.Translate(moveSpeed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.UpArrow)) 
         {
             tr.Translate(Vector3.forward * moveSpeed * Time.deltaTime);// 위(z축 +)
+            //tr.Translate( 0, 0,moveSpeed * Time.deltaTime);        
         }
         if (Input.GetKey(KeyCode.DownArrow)) 
         {
             tr.Translate(Vector3.back * moveSpeed * Time.deltaTime);// 아래(z축 -)
+            //tr.Translate( 0, 0, -moveSpeed * Time.deltaTime);
+            
         }
     }
 }
