@@ -28,10 +28,16 @@ Animator Controller를 생성해준다.
 
 그리고 그 캐릭터의 inspector의 Animator의 controller에 만든 Animaition을 맞게 넣어준다 (이거 빼먹어서 동작이 안먹길래 잠깐 헤맸다.ㅠㅠ)
 
+수평(h), 수직(v) 값 받아오기 // 코드 상에서도 추가해줘야함
+-> animator의 Parameter에서 추가((((((((((((((왜 안도ㅣ지ㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣ!!!!!!!!!!!!!!?!?!?!????????????????????))))))))))))))
+
+animator의 Blend tree --> 여러 변수들을 효율적으로 관리할 수 있게 해줌
+
 * 애니메이션 관련 코드 첨부
 
 public class MainController : MonoBehaviour
 {
+    
     public Animator animator;
 
     // Start is called before the first frame update
