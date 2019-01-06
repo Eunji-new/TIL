@@ -39,7 +39,17 @@ Animator Controller를 생성해준다.
 
 해결) has exit time(방향키 누르면 바로 될 수 있게 해줌) 체크 풀기!!!!
 
-animator의 Blend tree --> 여러 변수들을 효율적으로 관리할 수 있게 해줌
+animator의 Blend tree --> 여러 변수들을 효율적으로 관리할 수 있게 해줌 //부딪히는 것 같은 물리적 효과 표현에 도움
+
+rigidbody component
+-> 중력 효과 풀어줌 : 왜??
+
+-> apply root motion 풀어줌 ->그래야 스크립트 자체에서 캐릭터의 위치와 회전 제어 가능
+
+
+### 충돌 감지
+capsule collider component 추가해줌
+(다른 물체들이 이 캡슐을 중신으로 충돌함)
 
 * 애니메이션 관련 코드 첨부
 
