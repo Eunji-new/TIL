@@ -53,15 +53,28 @@ capsule collider component 추가해줌
 
 * 애니메이션 관련 코드 첨부
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class MainController : MonoBehaviour
 {
-    
     public Animator animator;
+    public Rigidbody rigidbody;
+
+    private float h; //수평
+    private float v; //수직
+
+    private float moveX, moveZ; //X(좌우), Z(앞뒤)축의 거리, Y는 공중
+    private float speedZ = 80f; //앞이동속도: 옆보다 빠름
+    private float speedH = 50f; //옆이동속도
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -73,6 +86,22 @@ public class MainController : MonoBehaviour
             //두번쨰 인자는 레이어, 기본적인 레이어는 -1임
             //세번째 넣어서 시간차 없애줌
         }
-        
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical"); //-1부터1까지 정보가 담기게 됨.
+
+        animator.SetFloat("h", h); //실제 애니메이션에서 h와 v의 정보를 이용할수있게해줌
+        animator.SetFloat("v", v);
+
+        moveX = h * speedH * Time.deltaTime;
+        //deltaTime : 어떤 컴퓨터든 같은 속도를 낼수있게 해줌
+        moveZ = v * speedZ * Time.deltaTime; 
+
+        if(moveZ <= 0) //뒤로 갈때
+        {
+            moveX = 0; //옆으로 못감
+        }
+
+        rigidbody.velocity = new Vector3(moveX, 0, moveZ);
+         
     }
 }
