@@ -21,7 +21,7 @@ Window의 Asset Store(Ctrl + 9)에서 다운로드, 임폴트
 ### - 텍스쳐
 
 ## 애니메이션
-Assets에 Animations 폴더를 만들어서 그안에
+Assets에 Animations 폴더 안에
 Animator Controller를 생성해준다.
 
 이미 다운받은 Asset 캐릭터의 Animation으로 동작들을 넣어준다. 
@@ -33,11 +33,11 @@ Animator Controller를 생성해준다.
 
 코드에서 h, v값을 못받는다....
 
-해결) 코드를 if문 안에 잘못 넣어버렸다고 한다..됴륵
+- 해결) 코드를 if문 안에 잘못 넣어버렸다고 한다..됴륵
 
 그래도 캐릭터가 안 움직인다...
 
-해결) has exit time(방향키 누르면 바로 될 수 있게 해줌) 체크 풀기!!!!
+- 해결) has exit time(방향키 누르면 바로 될 수 있게 해줌) 체크 풀기!!!!
 
 animator의 Blend tree --> 여러 변수들을 효율적으로 관리할 수 있게 해줌 //부딪히는 것 같은 물리적 효과 표현에 도움
 

@@ -9,7 +9,7 @@ standard assets에서 third person~~받아서 캐릭터랑 메인카메라가 �
 
 
 
-##큐브 객체 줍기 코드
+## 큐브 객체 줍기 코드
 
 using System.Collections;
 using System.Collections.Generic;
