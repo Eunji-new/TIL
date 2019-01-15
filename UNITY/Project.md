@@ -5,6 +5,7 @@
 ## C# 스크립트 코드
 
  - 190114 ) 방향키를 너무 예민하게 잘받아서 극단적으로 이동함;;
+ - 190115 ) GetKeyDown - 눌렀을때만....알던건데,,,,,,,,,,,,,이거떄문에 몇시간을,,,,,,,,,,,ㅂㄷㅂㄷㅂㄷㅂㄷㅂㄷㅂㄷㄷㅂㄷㅂㄷㅂㄷㅂㄷㅂㄷ한심..
 
 
 using System.Collections;
@@ -18,7 +19,9 @@ public class Main_Capsule_Controller : MonoBehaviour
 {
 
    public float moveSpeed = 5.0f;
+
     public float gap = 4f; //왼,중,오 간격
+
     private Transform character = null;
 
     // Start is called before the first frame update
@@ -32,7 +35,7 @@ public class Main_Capsule_Controller : MonoBehaviour
     {
         character.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 앞으로 이동함
 
-        if (Input.GetKey(KeyCode.LeftArrow)) //왼쪽 방향키는 왼쪽
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) //왼쪽 방향키는 왼쪽
         { 
             if(character.position.x == gap) //현재 오른쪽이면
              character.position = new Vector3(0, 0, moveSpeed * Time.deltaTime); //중앙으로
@@ -40,7 +43,7 @@ public class Main_Capsule_Controller : MonoBehaviour
                 character.position = new Vector3(-gap, 0, moveSpeed * Time.deltaTime); //왼쪽으로
         }
 
-        if (Input.GetKey(KeyCode.RightArrow)) // 오른쪽 방향키는 오른쪽
+        if (Input.GetKeyDown(KeyCode.RightArrow)) // 오른쪽 방향키는 오른쪽
         {
 
             if (character.position.x == -gap) //현재 왼쪽이면
