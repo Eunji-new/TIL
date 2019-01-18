@@ -16,15 +16,21 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-
 public class Main_Capsule_Controller : MonoBehaviour
+
 {
 
-   public float moveSpeed = 5.0f;
+    public float moveSpeed = 5.0f;
 
     public float gap = 4f; //왼,중,오 간격
 
     private Transform character = null;
+
+    public int life = 3; //생명 3개
+
+    private Collision _collision = null;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,24 +41,48 @@ public class Main_Capsule_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        character.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 앞으로 이동함
+         character.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 앞으로 이동함
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)) //왼쪽 방향키는 왼쪽
-        { 
-            if(character.position.x == gap) //현재 오른쪽이면
-             character.position = new Vector3(0, 0, moveSpeed * Time.deltaTime); //중앙으로
-            else if (character.position.x == 0) //현재 중앙이면
-                character.position = new Vector3(-gap, 0, moveSpeed * Time.deltaTime); //왼쪽으로
+        {
+            if (character.position.x == 0 ) //현재 중앙이면
+            {
+                character.Translate(-gap, 0, moveSpeed * Time.deltaTime); //왼쪽으로
+
+            }
+            else if (character.position.x == gap) //현재 오른쪽이면
+            {
+                character.Translate(-gap, 0, moveSpeed * Time.deltaTime); //중앙으로
+            }
+           
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow)) // 오른쪽 방향키는 오른쪽
         {
+            if (character.position.x == 0) //현재 중앙이면
+            {
+                character.Translate(gap, 0, moveSpeed * Time.deltaTime); //오른쪽으로
+            
+            }
+            else if (character.position.x == -gap) //현재 왼쪽이면
+            {
 
-            if (character.position.x == -gap) //현재 왼쪽이면
-                character.position = new Vector3(0, 0, moveSpeed * Time.deltaTime); //중앙으로
-            else if (character.position.x == 0) //현재 중앙이면
-                character.position = new Vector3(gap, 0, moveSpeed * Time.deltaTime); //오른쪽으로
+                character.Translate(gap, 0, moveSpeed * Time.deltaTime); //중앙으로
+                
+            }
         }
-
+       
     }
+  
+    private void OnCollisionEnter(Collision collision) //난 왜 이 함수가 없는것인가...?
+    {
+
+        if(collision.collider.tag == "Barrel")
+        {
+            Debug.Log("충돌 감지");
+            life--;
+            Debug.Log(life);
+        }
+    }
+   
 }
