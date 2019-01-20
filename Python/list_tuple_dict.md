@@ -81,7 +81,7 @@ a = list(t) // 튜플 -> 리스트
 
 b = tuple(a) //리스트 -> 튜플
 
-# dic
+# dict
 
 dic = {}
 
