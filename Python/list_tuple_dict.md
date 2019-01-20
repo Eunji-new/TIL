@@ -81,6 +81,25 @@ a = list(t) // 튜플 -> 리스트
 
 b = tuple(a) //리스트 -> 튜플
 
+# dic
+
+dic = {}
+
+dic['apple'] = 'Red Fruit'
+
+dic[1] = 1
+
+dic['1'] = '1'
+
+dic =  {1 : 1, '1' : '1', 'apple' : 'Red Fruit'} //값을 넣은 순서대로 저장되진 않음
+
+dic.keys() = ['1', 1, 'apple'] //사전 dic의 key들을 새로운 리스트로
+
+dic.values() = ['1', 1, 'Red Fruit'] //사전 dic의 값들을 새로운 리스트로
+
+'apple' in dic => True
+
+'strawberry' in dic => False
 
 
 

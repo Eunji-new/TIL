@@ -31,3 +31,6 @@ Rigidbody의 Kinermatic 속성이 꺼져있어야 충돌 발생 가능!
 3. void OnCollisionEnter(Collider col)
 
 - 충돌이 끝날 때
+
+
+### 왜 내 유니티에서는 이 함수가 존재하지않는가....?
