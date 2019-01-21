@@ -74,7 +74,7 @@ public class Main_Capsule_Controller : MonoBehaviour
        
     }
   
-    private void OnCollisionEnter(Collision collision) //난 왜 이 함수가 없는것인가...?
+    private void OnCollisionEnter(Collision collision) //난 왜 이 함수가 없는것인가...?왜ㅐㅐㅐㅐㅐㅐㅐ
     {
 
         if(collision.collider.tag == "Barrel")
