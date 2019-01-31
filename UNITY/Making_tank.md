@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CsTank : MonoBehaviour
 {
+
     public GameObject turret; //포탑
     public GameObject gun; // 포신
     public Transform Bullet; //포탄 프리팹
