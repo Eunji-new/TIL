@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CsTank : MonoBehaviour
 {
-
     public GameObject turret; //포탑
     public GameObject gun; // 포신
     public Transform Bullet; //포탄 프리팹
@@ -20,7 +19,7 @@ public class CsTank : MonoBehaviour
     {
         spPoint = transform.Find("Turret/Gun/Cannon/spPoint"); //주의! 경로를 정확하게 입력한다.
         turret = transform.Find("Turret").gameObject;
-        gun = transform.Find("Turret/Cannon").gameObject;
+        gun = transform.Find("Turret/Gun").gameObject;
     }
 
     // Update is called once per frame
@@ -37,10 +36,10 @@ public class CsTank : MonoBehaviour
         float keyGun = Input.GetAxis("Mouse ScrollWheel");
 
         transform.Translate(Vector3.forward * amtMove * keyMove); //이동
-        transform.Rotate(Vector3.up * amtMove * keyRot); //회전
+        transform.Rotate(Vector3.up * amtMove * keyRot * 5); //회전
 
         turret.transform.Rotate(Vector3.up * amtMove * keyTurret);
-        gun.transform.Rotate(Vector3.right * keyGun * 10);
+        gun.transform.Rotate(Vector3.right * keyGun * 5);
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -59,7 +58,9 @@ public class CsTank : MonoBehaviour
        
         obj.GetComponent<Rigidbody>().AddForce(spPoint.forward * power);
 
-    }
+    } //포탄 발사
+
+
 }
 
 
