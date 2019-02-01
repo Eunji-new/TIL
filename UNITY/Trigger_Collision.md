@@ -61,6 +61,10 @@ Kinematic 옵션이 활성화.
 
 
 
+## 추가적 내용
+1. OnCollision의 매개변수는 Collision이고 OnTrigger의 매개변수는 Collider이다.
 
-## 3. 
+2. 두 물체 중 적어도 하나의 콜라이더에 Is Trigger 옵션이 있으면 OnTrigger()이벤타 호출된다.
+
+3. OnCollision과 OnTrigger 둘다 호출되는 경우는 없다.(Is Trigger 옵션의 유무에 따라 선택적 호출.)
 ### 왜 내 유니티에서는 이 함수가 존재하지않는가....?
