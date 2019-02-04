@@ -26,7 +26,7 @@ public class CsBullet : MonoBehaviour
         
         if (coll.tag == "Wall") //조건문을 걸어주지 않으면 충돌이 여러번 발생한다..왜인지는 모르겠다.
         {
-            Instantiate(explode, transform.position, Quaternion.identity); //Quaternion.identity는 프리팹의 회전이 필요없을 떄 사용
+            Instantiate(explode, transform.position, Quaternion.identity); //불꽃 프리팹 복제, Quaternion.identity는 프리팹의 회전이 필요없을 떄 사용
             Debug.Log("충돌 발생");
             Destroy(coll.gameObject); //벽 제거
             Destroy(gameObject); // 포탄 제거
