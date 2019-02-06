@@ -28,9 +28,6 @@ public class Main_Capsule_Controller : MonoBehaviour
 
     public int life = 3; //생명 3개
 
-    private Collision _collision = null;
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -72,9 +69,9 @@ public class Main_Capsule_Controller : MonoBehaviour
             }
         }
        
-    }
+    } //Update
   
-    private void OnCollisionEnter(Collision collision) //난 왜 이 함수가 없는것인가...?왜ㅐㅐㅐㅐㅐㅐㅐ
+   /*   private void OnCollisionEnter(Collision collision) //난 왜 이 함수가 없는것인가...?왜ㅐㅐㅐㅐㅐㅐㅐ
     {
 
         if(collision.collider.tag == "Barrel")
@@ -82,6 +79,18 @@ public class Main_Capsule_Controller : MonoBehaviour
             Debug.Log("충돌 감지");
             life--;
             Debug.Log(life);
+        }
+    }
+    */
+
+       private void OnTriggerEnter(Collider coll)
+    {
+        if(coll.tag == "Barrel") //Barrel과 부딧히면
+        {
+            Debug.Log("충돌 감지");
+            life--; //생명 하나 줄어듦
+            Debug.Log(life);
+            Destroy(coll.gameObject); //충돌한 배럴 제거
         }
     }
    
