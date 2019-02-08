@@ -13,6 +13,8 @@
 
  - 190206 ) Collsion관련 이벤트함수가 안떠서 한동안 다른거 하다가 왔더니 뜬다..;;무엇..부딪히면 사라지는 것까지 처리. 
 
+ -190207 ) 켑슐 position.x 가 언제부터인가 처음에 0으로 안뜬다..ㅜㅜㅜㅜ
+
 using System.Collections;
 
 using System.Collections.Generic;
@@ -55,7 +57,7 @@ public class Main_Capsule_Controller : MonoBehaviour
         
         character.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 앞으로 이동함
         Center.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 가운데에 고정(left, middle, right 고정해줌)
-        Debug.Log(character.position.x);
+       
         if (Input.GetKeyDown(KeyCode.LeftArrow)) //왼쪽 방향키는 왼쪽
         {
             if (character.position.x  < 1 && character.position.x > -1) //현재 중앙이면
