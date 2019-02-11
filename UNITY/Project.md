@@ -23,10 +23,14 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+using UnityEngine.UI; //UI사용위해서
+
+
 
 public class Main_Capsule_Controller : MonoBehaviour
-{
 
+{
+    
     public float moveSpeed = 5.0f;
     public float gap = 3f; //왼,중,오 간격
     private Transform character = null;
@@ -37,7 +41,8 @@ public class Main_Capsule_Controller : MonoBehaviour
     public Transform Middle;
     public Transform Left;
     public int n = 0;
-    
+    public Text timeText; //시간텍스트
+    float time = 0f; //시간
 
     // Start is called before the first frame update
     void Start()
@@ -48,18 +53,22 @@ public class Main_Capsule_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         move();
         Create_Barrel();
-     
+        if (time >= 0)
+        {
+            time += Time.deltaTime; // 프레임 수 더해준다..((delta.Time으로 어느 컴이든 같게 기준
+            timeText.text = "Time : " + time.ToString("F"); //time.Tostring("F")는 소숫점 많이 방출 방지
+        }
     } //Update
 
-  void move() /
-  /캐릭터 기본 이동
+  void move() //캐릭터 기본 이동
     {
-        
+       
         character.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 앞으로 이동함
         Center.Translate(Vector3.forward * moveSpeed * Time.deltaTime); //무조건 가운데에 고정(left, middle, right 고정해줌)
-       
+    
         if (Input.GetKeyDown(KeyCode.LeftArrow)) //왼쪽 방향키는 왼쪽
         {
             if (character.position.x  < 1 && character.position.x > -1) //현재 중앙이면
@@ -93,7 +102,7 @@ public class Main_Capsule_Controller : MonoBehaviour
     void Create_Barrel() //배럴 랜덤생성
     {
         n++;
-        if (n%40 == 0) //50프레임마다 한번씩...
+        if (n%70 == 0) //50프레임마다 한번씩...
         {
             int empty = (int)Random.Range(1, 4); //가는길에 Barrel 비워둘 곳.
           
@@ -119,7 +128,17 @@ public class Main_Capsule_Controller : MonoBehaviour
     {
         if(coll.tag == "Barrel") //Barrel과 부딪히면
         {
-            Debug.Log("충돌 감지");
+            Debug.Log("충돌 감지 T");
+            life--; //생명 하나 줄어듦
+            Debug.Log(life);
+            Destroy(coll.gameObject); //충돌한 배럴 제거
+        }
+    }
+    private void OnCollisionEnter(Collision coll)
+    {
+        if (coll.collider.tag == "Barrel") //Barrel과 부딪히면
+        {
+            Debug.Log("충돌 감지 C");
             life--; //생명 하나 줄어듦
             Debug.Log(life);
             Destroy(coll.gameObject); //충돌한 배럴 제거
