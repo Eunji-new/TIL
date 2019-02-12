@@ -37,6 +37,9 @@ public class StartGameButton : MonoBehaviour
 
 5. Button Inspector를 보면 On Click()이 있는데 하단 + 를 누르고 그에 맞는 스크립트 함수와 Object을(여기서는 Main Camera) 넣어준다.
 
+![5 Text](/Pictures/온클릭상세.PNG)
+
+
 6. File -> Build Setting 에서 씬들을 순서대로! 넣어준다.
 
 7. 맨처음 씬부터 시작하면 실행된다.
