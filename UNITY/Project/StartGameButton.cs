@@ -19,7 +19,7 @@ public class StartGameButton : MonoBehaviour
     public void Button()
     {
       
-            Invoke("startgame", .3f); // Invoke("실행함수", 지연시간)
+            Invoke("startgame", .3f); // Invoke("실행함수", 지연시간);
         
                   
     }
