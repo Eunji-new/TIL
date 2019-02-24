@@ -19,6 +19,10 @@
 
 - 190212 ) Object 크기와 속도 조절, 프레임과 moveSpeed 싱크가 안맞다.
 
+- 190213 ) 게임 첫 화면을 만들었다. 
+
+- 190225 ) 속도 밸런스 포기. 마지막 시간 상속만 제대로 받으면 될 것 같다.
+
 using System.Collections;
 
 using System.Collections.Generic;
