@@ -31,10 +31,13 @@ using UnityEngine;
 
 using UnityEngine.UI; //UI사용위해서
 
+using UnityEngine.SceneManagement; //SceneManager 사용위해
+
 
 public class Main_Capsule_Controller : MonoBehaviour
-{
 
+{
+    
     public float moveSpeed = 4.0f;
     public float gap = 3f; //왼,중,오 간격
     private Transform character = null;
@@ -51,6 +54,7 @@ public class Main_Capsule_Controller : MonoBehaviour
     public Text timeText; //시간텍스트
     public Text lifeText;  // 생명텍스트
     float time = 0f; //시간
+   public float endTime; //버틴 시간
     int frame=30;
 
     // Start is called before the first frame update
@@ -127,16 +131,16 @@ public class Main_Capsule_Controller : MonoBehaviour
 
             }
         }
-        if(n%15 == 0)
+         /* if(n%15 == 0)
         {
-            moveSpeed += 0.1f;
-        }
+            moveSpeed += 0.1f; //속도 높
+        } */
     }
 
     void Create_Barrel() //배럴 랜덤생성
     {
       
-        if (n%frame == 0) //프레임마다 한번씩...frame 작을수록  배럴 더 빠르게 생성.
+        if (n%50 == 0) //프레임마다 한번씩...frame 작을수록  배럴 더 빠르게 생성.
         {
             
             int empty2 = (int)Random.Range(1, 4); //가는길에 Barrel 비워둘 곳.
@@ -169,7 +173,7 @@ public class Main_Capsule_Controller : MonoBehaviour
             life--; //생명 하나 줄어듦
             Debug.Log(life);
             Destroy(coll.gameObject); //충돌한 배럴 제거
-            if(life == 4)
+            if (life == 4)
                 lifeText.text = "Life : ♥ ♥ ♥ ♥";
             else if (life == 3)
                 lifeText.text = "Life : ♥ ♥ ♥";
@@ -178,8 +182,24 @@ public class Main_Capsule_Controller : MonoBehaviour
             else if (life == 1)
                 lifeText.text = "Life : ♥";
             else
+            {
                 lifeText.text = "Life : ";
+                endTime = time;
+                Button();
+            }
         }
     }
-  
+    public void Button()
+    {
+
+        Invoke("gameover", .3f); // Invoke("실행함수", 지연시간)
+
+
+    }
+    private void gameover()
+    {
+        SceneManager.LoadScene("GameOver"); //다음으로 씬 GameOver 불러옴
+        Debug.Log(endTime);
+    }
+
 }
