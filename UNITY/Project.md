@@ -23,6 +23,8 @@
 
 - 190225 ) 속도 밸런스 포기. 마지막 시간 상속만 제대로 받으면 될 것 같다.
 
+- 190304 ) 상속받으면 데이터가 안넘어가나!?씬 넘어가면 데이터가 사라지는건가 : 이유 찾기...
+
 using System.Collections;
 
 using System.Collections.Generic;
@@ -34,10 +36,10 @@ using UnityEngine.UI; //UI사용위해서
 using UnityEngine.SceneManagement; //SceneManager 사용위해
 
 
-public class Main_Capsule_Controller : MonoBehaviour
+public class Main_Capsule_Controller :  MonoBehaviour
 
 {
-    
+
     public float moveSpeed = 4.0f;
     public float gap = 3f; //왼,중,오 간격
     private Transform character = null;
@@ -53,12 +55,19 @@ public class Main_Capsule_Controller : MonoBehaviour
     public int n = 0;
     public Text timeText; //시간텍스트
     public Text lifeText;  // 생명텍스트
-    float time = 0f; //시간
-   public float endTime; //버틴 시간
-    int frame=30;
+    float time = 0f;        //시간
+    public static float endTime; // 버틴 시간
 
-    // Start is called before the first frame update
-    void Start()
+
+
+  /* 씬이 바뀌어도 이 씬은 사라지지않게 함.
+   void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+    */
+        // Start is called before the first frame update
+        void Start()
     {
         character = this.gameObject.GetComponent<Transform>(); //메인 캡슐 캐릭터
         lifeText.text = "Life : ♥ ♥ ♥ ♥ ♥";
@@ -165,8 +174,9 @@ public class Main_Capsule_Controller : MonoBehaviour
         n++;
       
     }
-    private void OnTriggerEnter(Collider coll)
+    public void OnTriggerEnter(Collider coll)
     {
+        
         if(coll.tag == "Barrel") //Barrel과 부딪히면
         {
             Debug.Log("충돌 감지 T");
@@ -188,18 +198,22 @@ public class Main_Capsule_Controller : MonoBehaviour
                 Button();
             }
         }
+     
     }
-    public void Button()
+    private void Button()
     {
-
         Invoke("gameover", .3f); // Invoke("실행함수", 지연시간)
-
-
     }
-    private void gameover()
+    public void gameover()
     {
+        
         SceneManager.LoadScene("GameOver"); //다음으로 씬 GameOver 불러옴
-        Debug.Log(endTime);
+       
+         Debug.Log(endTime);
+
+        Debug.Log("게임오버 시간 :" + endTime);
+        
+   
     }
 
 }
