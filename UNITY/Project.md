@@ -25,6 +25,8 @@
 
 - 190304 ) 상속받으면 데이터가 안넘어가나!?씬 넘어가면 데이터가 사라지는건가 : 이유 찾기...
 
+- 190305 ) 씬넘어가도 데이터 유지 -> static 사용!!
+
 using System.Collections;
 
 using System.Collections.Generic;
