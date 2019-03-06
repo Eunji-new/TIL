@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class csButton : MonoBehaviour
+public class csGameOver : Main_Capsule_Controller
 {
 
-    public Text startGame;
-
+    public Text endtimetext;
+  
+   
+    
     // Start is called before the first frame update
     void Start()
     {
-        startGame.text = "Start Game"; // text를 start game으로 바꿈
-        
-       // startGame.GetComponent<Text>().text = "Start Game";
+       // endtimetext.text = Main_Capsule_Controller.endTime.ToString("F");
+        endtimetext.text = endTime.ToString("F");
     }
 
     // Update is called once per frame
