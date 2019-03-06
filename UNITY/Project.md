@@ -234,10 +234,7 @@ public class Main_Capsule_Controller :  MonoBehaviour
         {
                 eight_z++;
                 int empty5 = (int)Random.Range(1, 4); //가는길에 Barrel 비워둘 곳.
-                int empty6 = (int)Random.Range(1, 4);
-                int empty7 = (int)Random.Range(1, 4);
-                int empty8 = (int)Random.Range(1, 4);
-                int empty9 = (int)Random.Range(1, 4);
+            
    
             if (empty5 == 1) //왼쪽 비워놓기
                 {
