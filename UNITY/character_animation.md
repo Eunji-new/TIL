@@ -54,11 +54,15 @@ capsule collider component 추가해줌
 * 애니메이션 관련 코드 첨부
 
 using System.Collections;
+
 using System.Collections.Generic;
+
 using UnityEngine;
+
 
 public class MainController : MonoBehaviour
 {
+    
     public Animator animator;
     public Rigidbody rigidbody;
 

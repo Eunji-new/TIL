@@ -12,11 +12,14 @@ standard assets에서 third person~~받아서 캐릭터랑 메인카메라가 �
 ## 큐브 객체 줍기 코드
 
 using System.Collections;
+
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class SphereControl : MonoBehaviour
 {
+
     private float speed = 10.0f;
     private bool got = false; //잡고있냐
 
