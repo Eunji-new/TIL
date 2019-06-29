@@ -17,3 +17,9 @@ build.gradle의
 
     의 1.0.2를 1.0.1로
 3.0.2를 3.0.1로 바꿔준다.
+
+### 이클립스 설치
+
+- jdk와 jre 설치를 한 상태임에도 불구하고
+ eclipse_inst_win64.exe를 실행시키면
+  jre missing오류가 뜬다. 해결,,,,
