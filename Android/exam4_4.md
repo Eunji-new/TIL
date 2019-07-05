@@ -1,11 +1,13 @@
 
 이벤트 리스너에서
 
-버튼은 setonClickListener만
+버튼은 setOnClickListener만
 
-체크박스는 setOnCheckChangelistner만
+체크박스는 setOnCheckChangeListner만
 
-radiobutton은 둘다 되는 것 같아.
+Radiobutton은 둘다 되는 것 같아.
+
+
 
 
 # 안드로이드 버전 선택  xml
