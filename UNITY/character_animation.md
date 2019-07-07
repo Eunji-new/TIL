@@ -52,7 +52,7 @@ capsule collider component 추가해줌
 (다른 물체들이 이 캡슐을 중신으로 충돌함)
 
 * 애니메이션 관련 코드 첨부
-
+~~~c#
 using System.Collections;
 
 using System.Collections.Generic;

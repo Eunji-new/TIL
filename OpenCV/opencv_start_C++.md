@@ -1,7 +1,7 @@
 ### 활성 솔루션 플랫폼을 x64로
 
 # HelloCV
-    
+   ~~~cpp 
 #include "opencv2/opencv.hpp"
 
 #include <iostream>
@@ -31,6 +31,7 @@ int main()
 	return 0;
 }
 
+~~~
 
 # 주요함수 설명
 1. imread(파일 이름, flags = IMREAD_COLOR)

@@ -30,7 +30,7 @@
 - 우선은 그다지 길지 않은 코드니까 첨부함
 
 
-
+~~~c#
    using System.Collections;
 
 using System.Collections.Generic;
@@ -76,7 +76,7 @@ public class Ctr : MonoBehaviour
         }
     }
 }
-
+~~~
 
 ## Time.deltaTime(초 / 프레임 레이트)
 

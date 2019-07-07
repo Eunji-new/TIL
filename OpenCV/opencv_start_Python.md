@@ -11,7 +11,7 @@ IDLE에서 import cv2로 확인.
 
 
 
-
+~~~py
 import numpy as np
 
 import cv2
@@ -38,6 +38,7 @@ def showImage():
 
 showImage()
 
+~~~
 ##  imgfile = 'images/flower.jpg'
 이미지 파일 경로는 지금 파이썬 파일의 경로가 상대경로로 작용!! ex) C:\User\신은지\Desktop\openCV_1.py로 되어있으면 Desktop경로부터 시작~~
 

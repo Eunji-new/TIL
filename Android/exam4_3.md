@@ -1,3 +1,4 @@
+~~~html
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -41,6 +42,6 @@
 
 <//LinearLayout>
 
-
+~~~
 <img width="201" alt="캡처" src="https://user-images.githubusercontent.com/28985207/60663947-9c3eed80-9e9b-11e9-8b36-3c3538c21962.PNG">
 

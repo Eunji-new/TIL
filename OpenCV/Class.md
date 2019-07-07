@@ -1,3 +1,4 @@
+~~~cpp
 #include "opencv2/opencv.hpp"
 #include <iostream>
 
@@ -67,3 +68,4 @@ int main()
 	bool ret = (str2 == "WORLD"); // ret == false 대소문자구별
 
 }
+~~~

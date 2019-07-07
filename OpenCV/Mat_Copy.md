@@ -1,3 +1,4 @@
+~~~cpp
 #include "opencv2/opencv.hpp"
 
 #include <iostream>
@@ -32,3 +33,5 @@ int main() {
 	waitKey();
 	destroyAllWindows();
 }
+
+~~~

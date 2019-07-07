@@ -10,7 +10,7 @@
 
 4. Main Camera에 스크립트 추가
 
-
+~~~c#
 using UnityEngine.SceneManagement; //SceneManager 사용위해 추가
 
 public class StartGameButton : MonoBehaviour
@@ -34,6 +34,7 @@ public class StartGameButton : MonoBehaviour
         SceneManager.LoadScene("SampleScene"); //다음으로 SampleScene 불러옴
     }
 }
+~~~
 
 5. Button Inspector를 보면 On Click()이 있는데 하단 + 를 누르고 그에 맞는 스크립트 함수와 Object을(여기서는 Main Camera) 넣어준다.
 
