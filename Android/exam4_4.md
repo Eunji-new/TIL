@@ -11,6 +11,7 @@ Radiobutton은 둘다 되는 것 같아.
 
 
 # 안드로이드 버전 선택  xml
+~~~html
 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -92,9 +93,9 @@ Radiobutton은 둘다 되는 것 같아.
 <//LinearLayout>
 <//ScrollView>
 
-
+~~~
 # Main.java
-
+~~~java
 package com.cookandroid.exam4_4;
 
 import android.support.v7.app.AppCompatActivity;
@@ -198,5 +199,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+~~~
 
 ![image](https://user-images.githubusercontent.com/28985207/60668986-2d1bc600-9ea8-11e9-98a8-76c28d383245.png)
