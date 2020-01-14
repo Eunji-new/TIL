@@ -1,0 +1,28 @@
+      #QuickReservation{
+            width: 100%;
+            height: 250px;
+            background-color: sandybrown;
+            display: inline-block;
+            text-shadow:  0 0 3px white;
+          
+        }
+        #div_in_left_quickmain{
+                width: 30%;
+                height: 80%;
+                display: inline-block;
+                margin-left:5%;
+                text-align: left;
+                text-align: center;
+            }
+        #div_in_right_quickmain{
+               
+                width: 50%;
+                height: 80%;
+                text-align: center;
+                display: inline-block;
+                margin-left: 7%;
+            }
+            span{
+                font-size: 70%;
+            }
+           

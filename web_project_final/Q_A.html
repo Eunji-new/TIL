@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CafeBooK</title>
+	<style>
+	.btn:hover{ background-color:#dcdcdc; }
+	nav a:link{color:black;text-decoration:none}
+	nav a:visited{color:black;text-decoration:none}
+	span{font-size:12px; color:#969696;}
+	footer{border-radius:0px 0px 60px 60px; background-color:#DDDDDD; opacity:0.9;}
+	footer td{width:25%;}
+	section th{width:20%; text-align:left; vertical-align:top;}
+	section input{height:20px;}
+	.entry{width:100%; height:550px; background-image : url('main_image.png'); background-size:100% 120%;}
+	#menu{background-color:rgba(0,0,0,0.5);width:100%;height:370px;position:relative; z-index:100;visibility:hidden; top:81.5px;}
+	#change{border:none; padding-right:45px; padding-top:25px; float:right; width:63%;z-index:50;position:relative;top:-375px}
+	header ul li{display:inline; padding:0 47px;} 
+	header ul li:first-child{border-left:none;}
+	header a:link{color:white; text-decoration:none}
+	header a:visited{color:white; text-decoration:none;}
+	header table a:link{color:white; font-size:15px;}
+	header table div:hover{background-color:rgba(255,255,255,0.51);}
+	header em a:link{color:black;}
+	footer{border-radius:0px 0px 60px 60px; background-color:#323232; text-align:center; color:#a0a0a0;}
+	#SNS table div{transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1); transition: all 0.7s ease-in-out;}
+	#SNS table div:hover{transform: scale(1.3);-webkit-transform: scale(1.3);-moz-transform: scale(1.3);-ms-transform: scale(1.3);-o-transform: scale(1.3);}
+	#SNS td{width:11%;overflow:hidden; border:5px solid white; border-radius:20px;}
+	#SNS img{width:80%;}
+</style>
+<script src="Community.js">
+</script>
+<script src="cafebook.js"></script>
+<link rel="stylesheet" href="cafebook.css">
+</head>
+<body>
+	<header>
+		<div class="entry">
+		<div id="menu" onmouseover="menuu()" onmouseout="menuu2()">
+			<table style="float:right; text-align:center; width:53%; margin-right:120px; margin-top:20px;z-index:100;position:relative;" cellpadding=5px>
+				<tr><td><div><a href="reservation_method.html" target="_self" style="text-decoration : none;">예약 방법</a></div></td>
+					<td><div><a href="ediya.html" target="_self" style="text-decoration : none;">EDIYA</a></div></td>
+					<td><div><a href="Community.html" target="_self" style="text-decoration : none;">이벤트</a></div></td>
+					<td><div><a href="Customer Services.html" target="_self" style="text-decoration : none;">고객의 소리</a></div></td></tr>
+				<tr><td><div><a href="quick_reservation.html" target="_self" style="text-decoration : none;">빠른 예약</a></div></td>
+					<td><div><a href="starbucks.html" target="_self" style="text-decoration : none;">STARBUCKS</a></div></td>
+					<td><div><a href="Notice.html" target="_self" style="text-decoration : none;">공지사항</a></div></td>
+					<td><div><a href="Q&A.html" target="_self" style="text-decoration : none;">Q &amp; A</a></div></td></tr>
+				<tr><td></td><td><div><a href="" target="_self" style="text-decoration : none;">HOLLYS</a></div></td>
+					<td><div><a href="Winner.html" target="_self" style="text-decoration : none;">당첨자 공지</a></div></td><td></td></tr>
+				<tr><td><td><div><a href="" target="_self" style="text-decoration : none;">A TWOSOME PLACE</a></div></td><td></td><td></td></tr>
+				<tr><td><td><div><a href="" target="_self" style="text-decoration : none;">CAFEBENE</a></div></td><td></td><td></td></tr>
+				<tr><td><td><div><a href="" target="_self" style="text-decoration : none;">CAFE PASCUCCI</a></div></td><td></td><td></td></tr>
+				<tr><td><td><div><a href="t" target="_self" style="text-decoration : none;">TOM N TOMS</a></div></td><td></td><td></td></tr>
+				<tr><td><td><div><a href="" target="_self" style="text-decoration : none;">ANGEL IN-US COFFEE</a></div></td><td></td><td></td></tr>
+				<tr><td><td><div><a href="" target="_self" style="text-decoration : none;">COFFEEBEAN</a></div></td><td></td><td></td></tr></table>
+		</div>
+		<div style="float:left; padding-left:60px; padding-top:10px; padding-bottom:10px;width:30%; z-index:50;position:relative;top:-380px">
+		<br><a href="cafebook.html"><img src="logo_white.png" width="30%"></a></div>
+		<div id="change">
+			<ul>
+				<li><a href="" target="_self" style="text-decoration : none;" onmouseover="menuu()">Quick Reservation</a></li>
+				<li><a href="" target="_self" style="text-decoration : none" onmouseover="menuu()">&nbsp;&nbsp;Cafe Guide</a></li>
+				<li><a href="" target="_self" style="text-decoration : none" onmouseover="menuu()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Community</a></li>
+				<li><a href="" target="_self" style="text-decoration : none" onmouseover="menuu()">Customer Services</a></li>
+			</ul></div>
+		<div style="z-index:1;position:relative; top:-380px; text-align: center;">
+		<hr align="center" style=" width: 95%;">
+		<div style="text-align:center; padding-top:30px" id="top"><img src="logo_white.png" style="width:45%;"></div>
+		<p style="text-align:center; color:white; font-size: 20px;">CAFEBOOK Cafe Seats Reservation Service System</p><br>
+		<div style="padding-left:46%">
+           <div class="container" id="1">
+            <a href="login.html" ><button>LOGIN</button></a>
+      </div>
+            </div></div></div>
+            <br><br>
+      <br><br><br><div style="background-color:#dcdcdc; width:70%; height:110px; margin:0 auto;">
+      <div style="float:left; padding-top:8px; padding-left:30px; width:60%"><h1>Q &amp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>|&nbsp;&nbsp;&nbsp;&nbsp;고객님들의 소리와 정보를 수용합니다.</span></h1></div>
+      <div style="float:right; padding-top:50px; width:25%"><span>Main&nbsp;&gt;&nbsp;Customer Servicesy&nbsp;&gt;&nbsp;Q &amp;&nbsp;A</span></div></div>
+	</header>
+	<nav>
+	</nav>
+	<section>
+		<br><div style="background-color:#dcdcdc; width:70%; height:270px; margin:0 auto; text-align:center; border-radius:20px; border:1px dotted #D27328">
+			<br><h1>질문 또는 건의사항이 있으신가요? 이용에 불편한 점이 있으신가요?</h1><h3 style="color:#D27328">고객의 소리에 귀 기울이는 CafeBooK이 되겠습니다.</h3>페이지 이용 시 불편사항 및 주문,배송 문제,제품 등 궁금하신 사항을 문의해주세요.<br>친절히 답변해드리겠습니다.<br><br><img src="logo_black.png" width="15%"></div><br><br><br>
+		<p><div style="width:70%; margin:0 auto;">
+			<iframe srcdoc="<html><head></head><body><h4>1. 수집하는 개인정보 항목</h4> 이름, 전화번호, 주소, 이메일 주소, 기타 고객상담을 위하여 고객이 제공하는 필수 정보 등 상담 처리를 위한 개인정보를 요청합니다.<br>익명 상담을 원하시는 고객의 경우에는 수집하지 않습니다. <br>(단, 개인정보 수집이 안될 경우 상담 업무가 제한적으로 이루어질 수 있음을 양해 부탁드립니다) <br><h4>2. 개인정보 수집 목적</h4> 고객 관련 정보는 고객불만 사항의 상담, 불만처리 내용 모니터링 등의 관리, 교환 및 환불, 배송, 상담 처리를 위한 재연락, 해피콜(클레임 만족도 조사) 과정에서 사용됩니다.<h4>3. 개인정보의 보유 및 이용기간</h4>수집된 개인정보는 수집 목적이 종료되거나 보유기간 3년이 경과되면 파기합니다.<br>단, 관련 법령의 규정에 의하여 필요한 경우 그 기간 동안 개인정보를 보관합니다.</body></html>" style="width:48%; float:left;"></iframe>
+			<iframe srcdoc="<html><head></head><body><h4>1. 이용약관</h4>1. 본 사이트의 비회원은 로그인 없이 1:1 상담 내용을 작성할 수 있습니다. 회사는 상담 내용에 대하여 비회원에게 이메일을 통해서만 답변 드립니다.<br>2. 비회원이 1:1 상담글 게시판을 이용함에 있어 본인이 게시한 글의 조회, 수정, 이력 확인을 할 수 없으며, 답변은 이메일로만 전달됩니다.<br>3. 비회원이 본인 이외의 인물을 비방하거나 명예를 훼손하는 등 관계 법령에 위반되는 글을 게시할 경우 회사는 해당 게시글을 삭제할 수 있으며, 답변 불가합니다.<br><br><h4>2. 개인정보취급방침</h4>1.회사는 비회원이 1:1 상담글 내용에 대한 답변을 받기 위하여 필요한 비회원의 이름, 전화번호, 이메일 주소를 수집하여 답변을 위해서만 이용하고, 상담 글 관리 기간 동안 보유합니다. <br>2.상기 내용에 동의하지 않는 경우에 상담 내용에 대한 답변을 드릴 수 없습니다. </body></html>" style="width:48%; float:right;"></iframe>
+			<div style="float:left; width:52%"><br><form> 개인정보 수집방침을 읽고 동의하십니까?<br><input type="radio" name="r1" value="1" class="agree"> 동의함<input type="radio" name="r1" value="2" class="agree" checked> 동의하지 않음<br><br><br></form></div> 
+			<div style="float:right; width:48%"><br><form> 이용약관 및 개인정보 취급방침을 읽고 동의하십니까?<br><input type="radio" name="r2" value="1" class="agree"> 동의함<input type="radio" name="r2" value="2" class="agree" checked> 동의하지 않음<br><br><br></form></div></p></div>
+			<table align=center width="70%" cellspacing="15px" style="border:1px dotted #D27328">
+				<tr><th>이름</th><td><input type="text" size="25" value=""></td></tr>
+				<tr><th>연락처</th><td><form> <select name="numeber" > <option value="1" selected>010</option> <option value="2">011</option><option value="3">017</option></select>
+					&nbsp;-&nbsp;<input type="text" size="8" value="">&nbsp;-&nbsp;<input type="text" size="8" value=""></td></tr>
+				<tr><th>답변 받을 이메일 주소</th><td><input type="text" size="25" value=""></td></tr>
+				<tr><th>분류</th><td><form> <select name="cat1" > <option value="1">일반</option> <option value="2" selected>쇼핑몰/멤버스몰</option><option value="3">매장</option></select>
+					<form> <select name="cat2" > <option value="1" selected>불량/수신/AS</option> <option value="2">주문/결제</option><option value="3">포인트 및 기타</option></select></td></tr>
+				<tr><th>제목</th><td><input type="text" size="50" value=""></td></tr>
+				<tr><th>내용</th><td><input type="text" value="" style="height:300px;width:100%"></td></tr>
+				<tr><th>비밀번호</th><td><input type="text" size="20" value=""></td></tr></table>
+			<br><br><div style="text-align:center;">
+			<input type="image" src="cancel.png" alt="" onclick="alert('문의를 취소하고 내용을 초기화합니다.')" style="width:12%; height:35px">
+			<input type="image" src="inquire.png" alt="" onclick="alert('글이 등록되었습니다.\n빠른 시일 내에 답변드리겠습니다.\n감사합니다.')" style="width:12%; height:35px"></div><br><br>
+		</section>
+		<aside>
+      <div style="position:fixed;z-index:10000;top:700px; left:30px"><a href="#top"><img src="top.png" width="8%"></a></div>
+
+      <div id="right">
+         <img src="logo_black.png" width="90%">
+         <br>SHARE<br><input type="image" src="31.png" width="20%"> <input type="image" src="32.png" width="20%"> <input type="image" src="33.png" width="20%"><br>
+         <input type="image" src="34.png" width="20%"> <input type="image" src="35.png" width="20%"> <input type="image" src="36.png" width="20%"><br>
+         <br>CALL CENTER<h6>010-1234-5678<br>Monday - Friday<br>am 09:00 - pm 06:00<br>sat, holiday off</h6>
+         BANK INFO<h6>눙헙 000 - 0000 - 0000 - 00<br>예급주 : (주)CafeBooK</h6>
+         <img src="click2.png" onmouseover="menuu3()" width="20%"><br><br>
+         <div id="game"><video width="70%" height="450" controls><source src="game.mp4"></video><div><img src="cross.png" width="5%" onclick="menuu4()"></div></div>
+      </div>
+   </aside>
+	<footer>
+		<div><br><img src="logo_white.png" width="15%"><h5>사업자 등록번호:012-34-56789 &nbsp;|&nbsp; 대표전화:02-1234-5678 &nbsp;|&nbsp; FAX:02-9876-5432 &nbsp;|&nbsp; 개설문의:1234-5678
+			<br><br>서울 본사:서울특별시 노원구 공릉로 232 서울과학기술대학교 미래관 (주)CafeBooK<br><br>Choi Jin Young &nbsp;&nbsp;Shin Eun Ji &nbsp;&nbsp;Lee Su A</h5>
+            <h4 style="color:#505050">COPYRIGHT(C)2018 CafeBooK. ALL RIGHTS RESERVED.</h4><br></div>
+	</footer>
+</body>
+</html>
