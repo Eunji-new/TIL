@@ -9,14 +9,23 @@ int[] array = new int[5]{1,2,3,4,5};
 ```C#
  array = (array?.Concat(new int[] { 추가하려는 것 }) ?? new int[] { 추가하려는 것 }).ToArray();
 ```
-###  ?. 이란
 
-ex) a?.b --> a가 null이면 b 실행. null이 아니라면 그대로 a
+## Null 간단 체크
 
-### ?? 이란
+- ###  ?. 이란
 
-ex) a??b --> a가 null이면 a, a가 null이 아니라면 b 반환
+    ex) a?.b --> a가 null이면 b 실행. null이 아니라면 그대로 a
 
+- ### ?? 이란
+
+    ex) a??b --> a가 null이면 b, a가 null이 아니라면 a 반환
+
+- ### ??= 이란
+
+    ex) a??=b --> a가 null 이라면 a에 b를 대입, null이 아니라면 그대로 a
+
+
+<br>
 
  ## 배열 vs 리스트
  출처 : https://im-first-rate.tistory.com/124  [웃으면 1류다]
@@ -36,11 +45,11 @@ ex) a??b --> a가 null이면 a, a가 null이 아니라면 b 반환
  배열은 주로 정적인 경우에 사용한다.
  List가 동적일 때 유용
 
- ## 2차원 배열
+ ## 2차원 배열 
 
  ```C#
  int[,] array = new int[4, 2];
- 
+
  array.GetLength(0); //row 길이
  array.GetLength(1); //column 길이
 ```
@@ -54,6 +63,7 @@ ex) a??b --> a가 null이면 a, a가 null이 아니라면 b 반환
 List <자료형 or 클래스> 이름 = new List<자료형 or 클래스>(); 
 ```
 ## 추가
+
 ```C#
 list.Add();
 ```
