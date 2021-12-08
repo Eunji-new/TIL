@@ -12,3 +12,16 @@ Array.Distinct();
 ```
 ## Where
 조건에 맞는 값의 목록을 반환
+
+```C#
+//LINQ를 사용하여 69점을 초과하는 점수만 새로운 목록에 담는 프로그램 작성
+public int[] quizGrades = {44,55,32,56,78,23,89,99,100};
+
+void Start(){
+    var gradePass = quizGrades.Where(qg => qg > 69);
+
+    foreach(var grade in gradePass){
+        Debug.Log(grade);
+    }
+}
+```
