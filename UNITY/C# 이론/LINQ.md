@@ -19,7 +19,9 @@ public int[] quizGrades = {44,55,32,56,78,23,89,99,100};
 
 void Start(){
     var gradePass = quizGrades.Where(qg => qg > 69);
-
+    //내림차순 정렬
+    var gradePassDesc = quizGrades.Where(qg => qg > 69).OrderByDescending;
+    
     foreach(var grade in gradePass){
         Debug.Log(grade);
     }
