@@ -80,3 +80,36 @@ int B(string s){
 }
 ```
 
+## 반환형이 없고 매개변수가 있는 델리게이트
+Action 사용
+
+# 반환형이 없고 인자가 없는 델리게이트에 람다 사용하기
+```C#
+public Action a;
+
+void Start(){
+    a = () => Debug.Log("반환형, 인자 모두 없는 델리게이트 사용");
+}
+```
+# 반환형이 있고 인자가 없는 델리게이트에 람다 사용하기
+```C#
+public Func<int> f; //Action말고 Func 사용
+
+void Start(){
+    f = () => this.gameObject.name.Length;
+}
+```
+
+# 반환형이 있고 인자도 있는 델리게이트
+```C#
+public Func<int, int, int> f; //마지막 인자가 반환형, 그 앞이 매개변수
+
+void Start(){
+    f = (a, b) =>
+    {
+        a=7;
+        return a+b;
+    }
+    var result = f(5,5);
+}
+```
