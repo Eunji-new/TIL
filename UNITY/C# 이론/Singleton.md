@@ -29,3 +29,42 @@ void Awake()
 
  A.instance.A함수(); //A에서 선언된 변수를 A함수에서 바로 사용할 경우 에러
  ```
+
+ # 모노 싱글톤
+ 매 클래스 마다 _instance ~~로 싱글톤 코드를 매번 작성해야한다는 단점이 있다.
+ 모노 싱글톤은 이를 극복시켜 준다.
+ 추상 클래스를 이용해서 싱글톤을 상속한다.
+
+```C#
+//모노 싱글톤 생성
+public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
+{
+    private static T _instance;
+    public static T Instance;
+    {
+        get
+        {
+            if(_instance == null)
+                Debug.Log(typeof(T).ToString() + " is Null" );
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        _instance = this as T;
+    }
+}
+
+//모노 싱글톤 사용
+
+public class Player : MonoSingleton<Player>
+{
+   public override void Init()
+   {
+       base.Init();
+   }
+}
+
+//이전 싱글톤 사용과 같이 사용할 수 있다.
+```
