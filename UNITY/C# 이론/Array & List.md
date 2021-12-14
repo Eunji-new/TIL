@@ -8,13 +8,19 @@ int[] array = new int[5]{1,2,3,4,5};
 
 ```C#
  array = (array?.Concat(new int[] { 추가하려는 것 }) ?? new int[] { 추가하려는 것 }).ToArray();
+ 
+
 ```
+### Concat
+- array - 두 개의 배열 병합
+- string - string 여러개 이어붙이기
+- list - 두 개 list 병합
 
 ## Null 간단 체크
 
 - ###  ?. 이란
 
-    ex) a?.b --> a가 null이면 b 실행. null이 아니라면 그대로 a
+    ex) a?.b --> a가 null이면 그대로 null. null이 아니라면 a.b 실행
 
 - ### ?? 이란
 
