@@ -10,7 +10,7 @@ public class Solution {
         int[] replay3 = new int[]{3,3,1,1,2,2,4,4,5,5};
         int[] correctNum = new int[]{0,0,0};
         for(int idx = 0; idx<answer.Length; i++)
-            System.Console(idx + "\n");
+        {    
             //1번
             if(answer[idx] == replay1[idx%replay1.Length]){
                 correctNum[0]++;
@@ -29,7 +29,9 @@ public class Solution {
         int maxIdx = 0;
         for(int i = 0; i<correctNum.Length; i++){
             if(min>correctNum[i])
+            {  
                 min = correctNum[i];
+            }
             if(max<=correctNum[i])
             { 
                 max = correctNum[i];
