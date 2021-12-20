@@ -28,14 +28,17 @@ public class Solution {
             {
                 if(now == i)
                     isVisited[i] = 1;
-                if(isVisited[i]== 0)
+                if(computers[now, i] == 1)
                 {
-                    isVisited[i] = 1;
-                    next.Add(i);
-                }
-                else
-                {
-                    continue;
+                    if(isVisited[i]== 0)
+                    {
+                        isVisited[i] = 1;
+                        next.Add(i);
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
             }
             next.RemoveAt(0);
